@@ -1,7 +1,9 @@
 # BOT BATTLE
 
 # Description
-This is a galactic web application that allows galactic overload to browse through a list of robots, view robots details and enlist a bot into their army
+This is a galactic web application that allows galactic overload to browse through a list of robots, view robots details, delete robots by clicking the red delete button and enlist a bot into their army.
+
+
 
 
 # Getting Started
