@@ -18,22 +18,23 @@ function App() {
 
   function deleteBot(id){
      const updateBots = bots.filter((bot) => bot.id !== id )
-     setBots(updateBots)
-    
+     setBots(updateBots) 
   }
 
   function addArmy(id){
     const  updateArmy=bots.filter((bot) => bot.id === id)
     const fullArmy=[...armyBots,updateArmy[0]]
     setArmyBots(fullArmy)
-    
   }
-  
-  console.log(armyBots)
+
+  function releaseArmy(id){
+ const updateArmy =armyBots.filter((bot)=> bot.id !== id)
+   setArmyBots(updateArmy)
+  }
 
   return (
     <div>
-      <YourBotArmy armyBots = {armyBots}/>
+      <YourBotArmy armyBots = {armyBots} releaseArmy={releaseArmy}/>
      <BotCollection bots ={bots} deleteBot={deleteBot} addArmy={addArmy}/>
     </div>
   );
