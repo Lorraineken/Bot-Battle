@@ -1,8 +1,12 @@
 .bot_display{
     width: 12rem;
-    
+    background-color:plum;
 }
 
 .my_army{
     background-color: crimson;
+}
+
+.h1{
+    text-align: center;
 }

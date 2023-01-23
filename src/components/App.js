@@ -14,12 +14,26 @@ function App() {
    .then((botsData) => setBots(botsData)
    )
 
-  },[]) 
+  },[])
+
+  function deleteBackend(id){
+    fetch(`http://localhost:3000/bots/${id}`,{
+      method:"DELETE",
+      headers:{
+        "Content-Type":"application/json",
+        Accept:"application/json", 
+      }
+    })
+    
+  }
 
   function deleteBot(id){
      const updateBots = bots.filter((bot) => bot.id !== id )
      setBots(updateBots) 
+     {deleteBackend(id)}
   }
+
+
 
   function addArmy(id){
     const  updateArmy=bots.filter((bot) => bot.id === id)
@@ -38,6 +52,7 @@ function App() {
 
   return (
     <div>
+      <h1>BOT BATTLE</h1>
       <YourBotArmy armyBots = {armyBots} releaseArmy={releaseArmy}/>
      <BotCollection bots ={bots} deleteBot={deleteBot} addArmy={addArmy}/>
     </div>

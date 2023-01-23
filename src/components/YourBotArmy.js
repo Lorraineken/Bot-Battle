@@ -17,7 +17,6 @@ function YourBotArmy({armyBots,releaseArmy}){
 
     return(
      <div className="row">
-
        {army}
       
      </div>
