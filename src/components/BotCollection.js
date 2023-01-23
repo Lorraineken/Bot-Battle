@@ -10,7 +10,7 @@ function BotCollection({bots,deleteBot}){
     <p>Armor: {item.armor}</p>
     <p>BotClass: {item.bot_class}</p>
     <p>Catchphrase: {item.catchphrase}</p>
-    <button className="btn btn-danger" onClick={deleteBot}>X</button>
+    <button className="btn btn-danger" onClick={() => deleteBot(item.id)}>X</button>
     </div>
     )
 

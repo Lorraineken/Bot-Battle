@@ -17,9 +17,15 @@ function App() {
 
   console.log(bots)
 
+  function deleteBot(id){
+     const updateBots = bots.filter((bot) => bot.id !== id )
+     setBots(updateBots)
+    console.log(id)
+  }
+
   return (
     <div>
-     <BotCollection bots ={bots}/>
+     <BotCollection bots ={bots} deleteBot={deleteBot}/>
     </div>
   );
 }
