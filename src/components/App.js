@@ -23,8 +23,12 @@ function App() {
 
   function addArmy(id){
     const  updateArmy=bots.filter((bot) => bot.id === id)
-    const fullArmy=[...armyBots,updateArmy[0]]
+    const found = armyBots.find((item) => item.id === updateArmy[0].id)
+    if(!found){
+      const fullArmy=[...armyBots,updateArmy[0]]
     setArmyBots(fullArmy)
+    }
+   
   }
 
   function releaseArmy(id){
