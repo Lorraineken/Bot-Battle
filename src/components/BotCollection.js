@@ -1,10 +1,10 @@
 import React,{useEffect} from "react";
 
-function BotCollection({bots,deleteBot}){
+function BotCollection({bots,deleteBot,addArmy}){
 
     const collection = bots.map((item) => 
     <div key ={item.id} className='card container-md col-6 col-sm-3  bot_display'>
-    <img className="card-img-top" src={item.avatar_url} alt={`${item.name} ${item.bot_class}`} />
+    <img className="card-img-top" src={item.avatar_url} alt={`${item.name} ${item.bot_class}`} onClick={() => addArmy(item.id)} />
     <p>Name: {item.name}</p>
     <p>Health: {item.health}</p>
     <p>Armor: {item.armor}</p>
