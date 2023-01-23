@@ -24,7 +24,7 @@ function App() {
         Accept:"application/json", 
       }
     })
-    
+
   }
 
   function deleteBot(id){
@@ -53,6 +53,7 @@ function App() {
   return (
     <div>
       <h1>BOT BATTLE</h1>
+      <span>Click on Bot to add to Army</span>
       <YourBotArmy armyBots = {armyBots} releaseArmy={releaseArmy}/>
      <BotCollection bots ={bots} deleteBot={deleteBot} addArmy={addArmy}/>
     </div>
