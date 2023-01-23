@@ -9,7 +9,7 @@ function App() {
   const[armyBots,setArmyBots] = useState([])
    
   useEffect(() =>{
-    fetch("http://localhost:3000/bots")
+    fetch("https://bot-battle-db.vercel.app/bots")
    .then(response => response.json())
    .then((botsData) => setBots(botsData)
    )
@@ -17,7 +17,7 @@ function App() {
   },[])
 
   function deleteBackend(id){
-    fetch(`http://localhost:3000/bots/${id}`,{
+    fetch(`https://bot-battle-db.vercel.app/bots${id}`,{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json",
